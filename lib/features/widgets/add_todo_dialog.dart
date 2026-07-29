@@ -27,8 +27,8 @@ class _AddTodoDialogState extends State<AddTodoDialog> {
       content: TextField(controller: todoController),
 
       actions: [
-        IconButton(
-          icon: Icon(Icons.add, color: Colors.green),
+        ElevatedButton(
+          child: Text('Add', style: TextStyle(color: Colors.green)),
 
           onPressed: () {
             if (todoController.text.trim().isEmpty) {
@@ -43,8 +43,8 @@ class _AddTodoDialogState extends State<AddTodoDialog> {
           },
         ),
 
-        IconButton(
-          icon: Icon(Icons.close, color: Colors.red),
+        ElevatedButton(
+          child: Text('Cancel', style: TextStyle(color: Colors.orange)),
 
           onPressed: () {
             todoController.clear();
